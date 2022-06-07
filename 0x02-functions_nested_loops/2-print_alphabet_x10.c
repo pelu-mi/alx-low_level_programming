@@ -6,7 +6,7 @@
  */
 void print_alphabet_x10(void)
 {
-	char str[] = "abcdefghijklmnopqrstuvwxyz\n"
+	char str[] = "abcdefghijklmnopqrstuvwxyz\n";
 	int i = 0, j = 0;
 
 	while (i < 10)
