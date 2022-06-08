@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - Check if input is a lower case character
+ * print_sign - Check if input is a positive, negative or zero number
  * @n: number input to check if it is positive
  * Return: 1 if positive, 0 if zero and -1 if negative
  */
