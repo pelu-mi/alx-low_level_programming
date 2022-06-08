@@ -2,7 +2,7 @@
 
 /**
  * jack_bauer - Print every minute of a day
- * 
+ *
  * Return: Nothing
  */
 void jack_bauer(void)
@@ -27,9 +27,8 @@ void jack_bauer(void)
 					_putchar('\n');
 				}
 			}
+			if (a ==2 && b == 3)
+				break;
 		}
-		if (a == 2 && b == 3)
-			break;
 	}
-	
 }
