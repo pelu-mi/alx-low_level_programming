@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	long int t1 = 1, t2 = 2, sum = t1 + t2, total = 2;
+	long int i = 2; t1 = 1, t2 = 2, sum = t1 + t2, total = 2;
 
-	while (true)
+	while (i < 50)
 	{
 		if (sum > 4000000)
 			break;
