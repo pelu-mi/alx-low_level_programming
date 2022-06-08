@@ -13,7 +13,7 @@ int main(void)
 	printf("%lu, %lu, ", t1, t2);
 	while (i < 98)
 	{
-		//printf("%lu", sum);
+		/*printf("%lu", sum);*/
 		t1 = t2;
 		t2 = sum;
 		sum = t1 + t2;
