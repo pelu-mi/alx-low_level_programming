@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	long int i = 2; t1 = 1, t2 = 2, sum = t1 + t2, total = 2;
+	long int i = 2, t1 = 1, t2 = 2, sum = t1 + t2, total = 2;
 
 	while (i < 50)
 	{
