@@ -15,7 +15,7 @@ int main(void)
 			break;
 
 		if (sum % 2 == 0)
-			total+=sum;
+			total += sum;
 		t1 = t2;
 		t2 = sum;
 		sum = t1 + t2;
