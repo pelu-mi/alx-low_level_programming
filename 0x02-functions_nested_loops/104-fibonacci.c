@@ -17,7 +17,7 @@ int main(void)
 		t1 = t2;
 		t2 = sum;
 		sum = t1 + t2;
-		if (i != 97)
+		if (i < 97)
 			printf(", ");
 		i++;
 	}
