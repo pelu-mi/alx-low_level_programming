@@ -18,6 +18,7 @@ void times_table(void)
 			{
 				_putchar(' ');
 				_putchar(a + '0');
+			}
 			else if (a > 9)
 			{
 				mod = a % 10;
