@@ -7,20 +7,19 @@
  */
 int main(void)
 {
-	int i = 1;
-	unsigned long int t1 = 1, t2 = 2, sum = t1 + t2;
+	int i = 0;
+	unsigned long int t1 = 0, t2 = 1, sum = 0;
 
-	printf("%lu, %lu, ", t1, t2);
 	while (i < 98)
 	{
-		printf("%lu", sum);
+		sum = t1 + t2;
 		t1 = t2;
 		t2 = sum;
-		sum = t1 + t2;
+		printf("%lu", sum);
 		if (i < 97)
 			printf(", ");
 		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
