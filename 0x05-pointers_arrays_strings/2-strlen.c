@@ -7,8 +7,14 @@
  */
 int _strlen(char *s)
 {
-	int len;
+	int i;
+	char str;
 
-	len = sizeof(*s) / sizeof(*s[0]);
-	return (len);
+	str = *s;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
