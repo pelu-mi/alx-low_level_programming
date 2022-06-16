@@ -2,11 +2,12 @@
 
 /**
  * _strncat - Function to concatenate at most n bytes of src
- * @dest - String to be concatenated to
- * @src - string to concatenate to dest
- * @n - Maximum number of bytes to concatenate to dest
- * Return - Concatenated string
+ * @dest: String to be concatenated to
+ * @src: string to concatenate to dest
+ * @n: Maximum number of bytes to concatenate to dest
+ * Return: Concatenated string
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
