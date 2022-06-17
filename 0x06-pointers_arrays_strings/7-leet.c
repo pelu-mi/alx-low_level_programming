@@ -19,7 +19,7 @@ char *leet(char *c)
 			if (c[i] == find[j])
 			{
 				c[i] = replace[j / 2];
-				break;
+				j = 9;
 			}
 		}
 	}
