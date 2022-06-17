@@ -1,9 +1,9 @@
 #include "main.h"
-/**                                                                                                                                                                   
- * leet - convert string to 1337                                                                                                                                      
- * @c: string to convert                                                                                                                                              
- * Return: Converted string                                                                                                                                           
- */  
+/**
+ * leet - convert string to 1337
+ * @c: string to convert
+ * Return: Converted string
+ */
 
 char *leet(char *c)
 {
