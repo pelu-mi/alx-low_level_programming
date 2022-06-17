@@ -9,21 +9,14 @@
 
 void reverse_array(int *a, int n)
 {
-	int i, j, swap[10000];
+	int i, swap;
 
 	i = 0;
-	j = n;
-	while (i < n)
+	while (i < n / 2)
 	{
-		swap[i] = *(a + j);
+		swap = *(a + i);
+		*(a + i) = *(a + n - i - 1);
+		*(a + n - i - 1) = swap;
 		i++;
-		j--;
-	}
-
-	while (j < n)
-	{
-		*(a + j) = swap[i];
-		i--;
-		j++;
 	}
 }
