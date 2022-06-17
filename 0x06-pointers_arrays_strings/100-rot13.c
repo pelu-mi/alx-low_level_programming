@@ -13,7 +13,7 @@ char *rot13(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (j = 0; j <= 51; j++)
 		{
 			if (c[i] == find[j])
 			{
