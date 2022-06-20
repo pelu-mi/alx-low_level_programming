@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * _memset - Function to fill the first n bytes of the memory area pointed by s with constanty byte b
+ * _memset - Function to fill the first n bytes of the memory
+ * area pointed by s with constanty byte b
  * @s: pointer to first memory area
  * @b: byte to fill s with
  * @n: number of times to write b to s
