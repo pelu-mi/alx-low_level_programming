@@ -22,7 +22,7 @@ unsigned int _strspn(char *s, char *accept)
 				flag++;
 				break;
 			}
-			alen++;
+			aLen++;
 		}
 		if (flag == 1)
 			break;
