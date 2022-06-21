@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strstr - Function to find needle in a haystack
  * @haystack: String to search
@@ -10,6 +11,9 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i, j, flag = 0;
 
+	if (*needle == 0)
+		return (haystack);
+	
 	for (i = 0; *(haystack + i) != '\0'; i++)
 	{
 		for (j = 0; j >= 0; j++)
