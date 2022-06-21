@@ -13,25 +13,17 @@ char *_strstr(char *haystack, char *needle)
 
 	if (*needle == 0)
 		return (haystack);
-	
+
 	for (i = 0; *(haystack + i) != '\0'; i++)
 	{
-		for (j = 0; j >= 0; j++)
+		j = 0;
+		if (*(haystack + i + j) == *(needle + j))
 		{
-			if (*(haystack + i + j) != *(needle + j))
-				break;
-			if (*(needle + j) == '\0')
-			{
-				flag = 1;
-				break;
-			}
+			do {
+				if (*(needle + j) == '\0')
+					return (haystack + i);
+			} while (*(haystack + i + j) == *(needle + j));
 		}
-		if (flag == 1)
-			break;
 	}
-
-	if (flag == 1)
-		return (haystack + i);
-	else
-		return ('\0');
+	return ('\0');
 }
