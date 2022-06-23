@@ -9,7 +9,7 @@
 
 int prime_n(int n, int c)
 {
-	if (n < 0)
+	if (n < 2)
 		return (0);
 
 	if (n % c == 0)
