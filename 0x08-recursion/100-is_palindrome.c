@@ -1,55 +1,58 @@
 #include "main.h"
 
 /**
- * swap - swap 2 characters
- * @x - char to swap with y
- * @y - char to swap with x
- * Return: nothing
+ * _strlen - Returns the length of a string.
+ * @s: The string to be measured.
+ *
+ * Return: The length of the string.
  */
-
-void swap(char *x, char *y)
+int _strlen(char *s)
 {
-	char temp = *x;
-	*x = *y;
-	*y = temp;
+	int len = 0;
+
+	if (*(s + len))
+	{
+		len++;
+		len += _strlen(s + len);
+	}
+
+	return (len);
 }
 
-
 /**
- * rev - Reverse a string
- * @s: string to reverse
- * Return: nothing
+ * check_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ * @len: The length of s.
+ * @index: The index of the string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
  */
-
-void rev(char *s, int n, int i)
+int check_palindrome(char *s, int len, int index)
 {
-	if (*(s + n) == '\0')
-		return;
+	if (s[index] == s[len / 2])
+		return (1);
 
-	rev(s, n + 1, i);
+	if (s[index] == s[len - index - 1])
+		return (check_palindrome(s, len, index + 1));
 
-	if (i <= n)
-		swap(&s[i++], &s[n]);	
+	return (0);
 }
 
-
-
 /**
- * is_palindrome - function to check if n is a palindrome
- * @s: string to check
- * Return: 1 if n is a palindrome and 0 if it isn't
+ * is_palindrome - Checks if a string is a palindrome.
+ * @s: The string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a palindrome - 0.
  */
-
 int is_palindrome(char *s)
 {
-	char *str = s;
-	
-	rev(s, 0, 0);
-	if (*s == '\0')
+	int index = 0;
+	int len = _strlen(s);
+
+	if (!(*s))
 		return (1);
 
-	if (str == s)
-		return (1);
-	else 
-		return (0);
+	return (check_palindrome(s, len, index));
 }
