@@ -24,6 +24,7 @@ int wild(char *s2, int m, char *s1, int n)
 		else
 			return (0);
 	}
+	return (-1);
 }
 
 
