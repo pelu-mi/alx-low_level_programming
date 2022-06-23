@@ -30,7 +30,7 @@ void rev(char *s, int n)
 
 	rev(s, n + 1);
 
-	if (i <= k)
+	if (i <= n)
 		swap(&s[i++], &s[n]);	
 }
 
