@@ -14,13 +14,13 @@ int wild(char *s2, int m, char *s1, int n)
 		return (1);
 
 	if (*(s2 + m) == *(s1 + n))
-		wild(s2, m + 1, s1, n + 1);
+		return (wild(s2, m + 1, s1, n + 1));
 	else if (*(s2 + m) == '*')
-		wild(s2, m + 1, s1, n);
+		return (wild(s2, m + 1, s1, n));
 	else if (*(s2 + m) != *(s1 + n))
 	{
 		if (*(s2 + m - 1) == '*')
-			wild(s2, m, s1, n + 1);
+			return (wild(s2, m, s1, n + 1));
 		else
 			return (0);
 	}
