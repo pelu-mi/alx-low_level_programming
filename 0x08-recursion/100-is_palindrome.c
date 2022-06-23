@@ -21,14 +21,12 @@ void swap(char *x, char *y)
  * Return: nothing
  */
 
-void rev(char *s, int n)
+void rev(char *s, int n, int i)
 {
-	static int i = 0;
-
 	if (*(s + n) == '\0')
 		return;
 
-	rev(s, n + 1);
+	rev(s, n + 1, i);
 
 	if (i <= n)
 		swap(&s[i++], &s[n]);	
@@ -46,7 +44,7 @@ int is_palindrome(char *s)
 {
 	char *str = s;
 	
-	rev(s, 0);
+	rev(s, 0, 0);
 	if (*s == '\0')
 		return (1);
 
