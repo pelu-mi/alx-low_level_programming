@@ -28,9 +28,9 @@ int main(int argc, char **argv)
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (num > change[i])
+			if (num >= change[i])
 			{
-				num -= i;
+				num -= change[i];
 				cents++;
 				break;
 			}
