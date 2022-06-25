@@ -10,14 +10,14 @@
 
 int main(int argc, char **argv)
 {
-	int num, cents = 0;
+	int num, cents = 0, i;
+	int change[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
 	num = atoi(*(argv + 1));
 	if (num < 0)
 	{
@@ -26,30 +26,14 @@ int main(int argc, char **argv)
 	}
 	while (num != 0)
 	{
-		if (num >= 25)
+		for (i = 0; i < 5; i++)
 		{
-			num -= 25;
-			cents++;
-		}
-		else if (num >= 10)
-		{
-			num -= 10;
-			cents++;
-		}
-		else if (num >= 5)
-		{
-			num -= 5;
-			cents++;
-		}
-		else if (num >= 2)
-		{
-			num -= 2;
-			cents++;
-		}
-		else if (num >= 1)
-		{
-			num -= 1;
-			cents++;
+			if (num > change[i])
+			{
+				num -= i;
+				cents++;
+				break;
+			}
 		}
 	}
 	printf("%d\n", cents);
