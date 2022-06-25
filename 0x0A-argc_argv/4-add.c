@@ -1,5 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+
+/**
+ * isNumber - function to check if a string is a number
+ * @s: string to check
+ * Return: 1 if number, 0 if not
+ */
+
+int isNumber(char *s)
+{
+	int i;
+
+	for (i = 0; s[i]!= '\0'; i++)
+	{
+		if (isdigit(s[i]) == 0)
+			return (0);
+	}
+	return (1);
+}
 
 /**
  * main - entry point
@@ -19,10 +38,10 @@ int main(int argc, char **argv)
 	}
 
 	i = 1;
-	while(i < argc)
+	while (i < argc)
 	{
 		num = atoi(*(argv + i));
-		if (num == 0)
+		if (isNumber(*(argv + i)) == 0)
 		{
 			printf("Error\n");
 			return (1);
