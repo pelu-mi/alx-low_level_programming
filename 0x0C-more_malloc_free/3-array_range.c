@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _calloc - function to allocate memory for array and init to 0
- * @nmemb: number of elements in array
- * @size: size in bytes of each element in array
+ * array_range - function to create array of numbers from min to max
+ * both inclusive
+ * @min: min number in the array
+ * @max: max number in the array
  * Return: Pointer to the array or null
  */
 
