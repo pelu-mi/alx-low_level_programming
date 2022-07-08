@@ -9,13 +9,15 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, n = 100, flag = 0;
+	int i = 0, n = strlen(format), flag = 0;
+	char *str;
 
 	va_list args;
 	va_start(args, format);
 
 	while (i < n)
 	{
+		flag = 0;
 		switch (format[i])
 		{
 			case 'c':
@@ -31,10 +33,11 @@ void print_all(const char * const format, ...)
 				flag = 1;
 				break;
 			case 's':
-				if (va_arg(args, char *) == NULL)
+				str = va_arg(args, char *);
+			       	if (!str)
 					printf("(nil)");
 				else
-					printf("%s", va_arg(args, char *));
+					printf("%s", str);
 				flag = 1;
 				break;
 		}		
