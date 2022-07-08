@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	char *str;
 	va_list args;
 
-	while (*(format + n) != '\0')
+	while (*(format + n) != NULL)
 		n++;
 	va_start(args, format);
 	while (i < n)
@@ -39,8 +39,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
-				printf("%s", str);
-				flag = 1;
+				printf("%s", str), flag = 1;
 				break;
 		}
 		if (flag == 1 && i != n - 1)
