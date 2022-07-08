@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-#include <string.h>
 
 /**
  * print_all - print all items passed as arguments
@@ -9,12 +8,13 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, n = strlen(format), flag = 0;
+	int i = 0, n = 0, flag = 0;
 	char *str;
-
 	va_list args;
-	va_start(args, format);
 
+	while (*(format + n) != '\0')
+		n++;
+	va_start(args, format);
 	while (i < n)
 	{
 		flag = 0;
@@ -34,21 +34,17 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				str = va_arg(args, char *);
-			       	if (!str)
+				if (!str)
 					printf("(nil)");
 				else
 					printf("%s", str);
 				flag = 1;
 				break;
-		}		
-
+		}
 		if (flag == 1 && i != n - 1)
 			printf(", ");
-
 		i++;
 	}
-
 	printf("\n");
-
 	va_end(args);
 }
