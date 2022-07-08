@@ -8,9 +8,9 @@
 
 void print_all(const char * const format, ...)
 {
+	va_list args;
 	int i = 0, n = 0, flag = 0;
 	char *str;
-	va_list args;
 
 	while (*(format + n) != '\0')
 		n++;
