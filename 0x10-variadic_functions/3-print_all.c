@@ -9,15 +9,22 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int i = 0, n = 0, flag = 0;
+	int i = 0, j, flag = 0;
 	char *str;
+	const char t_arg[] = "cifs";
 
-	while (*(format + n) != '\0')
-		n++;
 	va_start(args, format);
 	while (format && format[i])
 	{
-		flag = 0;
+		j = 0;
+		while (t_arg[j])
+		{
+			if (format[i] == t_arg[j] && flag)
+			{
+				printf(", ");
+				break;
+			} j++;
+		}
 		switch (format[i])
 		{
 			case 'c':
@@ -39,8 +46,6 @@ void print_all(const char * const format, ...)
 				printf("%s", str);
 				break;
 		}
-		if (flag == 1 && i != n - 1)
-			printf(", ");
 		i++;
 	}
 	printf("\n"), va_end(args);
