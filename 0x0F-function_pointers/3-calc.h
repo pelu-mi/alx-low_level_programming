@@ -1,6 +1,8 @@
 #ifndef GUARD_H
 #define GUARD_H
 
+#include <stdio.h>
+#include <stddef.h>
 
 int op_add(int a, int b);
 int op_sub(int a, int b);

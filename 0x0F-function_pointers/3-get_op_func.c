@@ -1,5 +1,5 @@
 #include "3-calc.h"
-#include "3-op_functions.c"
+#include <stdlib.h>
 
 /**
  * get_op_func - Pointer function to return the correct
@@ -19,5 +19,11 @@ int (*get_op_func(char *s))(int a, int b)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
+
+	while (ops[i].op != NULL && *ops[i].op != *s)
+	{
+		i++;
+	}
+	return (ops[i].f);
 }
