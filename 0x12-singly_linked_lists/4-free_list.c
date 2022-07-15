@@ -1,9 +1,8 @@
 #include "lists.h"
 
-/*
+/**
  * free_list - Function to free a list
  * @head: address of first element in list
- * Return: Nothing
  */
 
 void free_list(list_t *head)
