@@ -1,4 +1,4 @@
-; My comments:
+; My comments: It's been a while
 ; File: 101-hello_holberton.asm
 ; Auth: Fadolapo Oluwapelumi
 ; Desc: 64-bit assembly program that prints Hello, Holberton and a new line.
