@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * list_len - Function to return total number of elements in h
