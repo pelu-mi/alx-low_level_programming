@@ -2,7 +2,7 @@
 
 /**
  * print_listint - Function to print out all the elements in a linked list
- * @h - list to print elements from
+ * @h: list to print elements from
  * Return: Size of the linked list.
  */
 
