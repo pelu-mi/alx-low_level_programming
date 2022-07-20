@@ -4,8 +4,8 @@
  * insert_nodeint_at_index - Function to insert new node at index idx in a list
  * @head: pointer to head of list
  * @idx: index of new node
- * @n: 
- * Return: pointer to nth node
+ * @n: value of new node
+ * Return: pointer to new node
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
