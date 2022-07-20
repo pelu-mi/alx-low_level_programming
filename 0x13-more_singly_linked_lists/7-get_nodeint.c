@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * pop_listint - Function to pop head node in a list
+ * get_nodeint_at_index - Function to nth node in a list
  * @head: pointer to head of list
- * Return: value of new head node
+ * @index: index of node to return
+ * Return: pointer to nth node
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -17,7 +18,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	temp = head;
 	while (num <= index)
 	{
-		if(num == index)
+		if (num == index)
 			break;
 		if (!temp)
 			return (NULL);
