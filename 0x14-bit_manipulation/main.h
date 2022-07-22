@@ -10,6 +10,5 @@ unsigned int binary_to_uint(const char *b);
 
 
 /* Helper Functions */
-int _pow(int x, int y);
 
 #endif

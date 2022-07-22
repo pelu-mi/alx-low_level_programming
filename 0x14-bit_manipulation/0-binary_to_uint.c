@@ -9,41 +9,29 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0;
-	int i = 0, len = 0;
+	unsigned int ui;
+	int len, base_two;
 
-	if (b[len] == '\0')
+	if (!b)
 		return (0);
 
-	while (*(b + i))
-		len++;
-	len--;
+	ui = 0;
 
-	for (i = 0; *(b + i) != '\0'; i++, len--)
+	for (len = 0; b[len] != '\0'; len++)
+		;
+
+	for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
 	{
-		if (*(b + i) != '0' || *(b + i) != '1')
+		if (b[len] != '0' && b[len] != '1')
+		{
 			return (0);
-		else if (*(b + i) == '1')
-			num += _pow(2, len);
+		}
+
+		if (b[len] & 1)
+		{
+			ui += base_two;
+		}
 	}
 
-	return (num);
-}
-
-
-/**
- * _pow - pow function using recursion
- * @x: base number
- * @y: exponent
- * Return: x pow y
- */
-
-int _pow(int x, int y)
-{
-	if (y < 0)
-		return (-1);
-	if (y == 0)
-		return (1);
-
-	return (x * _pow(x, y - 1));
+	return (ui);
 }
