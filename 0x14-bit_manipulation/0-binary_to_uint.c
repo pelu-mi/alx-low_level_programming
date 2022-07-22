@@ -24,8 +24,26 @@ unsigned int binary_to_uint(const char *b)
 		if (*(b + i) != '0' || *(b + i) != '1')
 			return (0);
 		else if (*(b + i) == '1')
-			num += pow(2, len);
+			num += _pow(2, len);
 	}
 
 	return (num);
+}
+
+
+/**
+ * _pow - pow function using recursion
+ * @x: base number
+ * @y: exponent
+ * Return: x pow y
+ */
+
+int _pow(int x, int y)
+{
+	if (y < 0)
+		return (-1);
+	if (y == 0)
+		return (1);
+
+	return (x * _pow_recursion(x, y - 1));
 }
