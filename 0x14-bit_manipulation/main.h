@@ -12,5 +12,6 @@ void print_binary(unsigned long int n);
 
 
 /* Helper Functions */
+int _putchar(char c);
 
 #endif
