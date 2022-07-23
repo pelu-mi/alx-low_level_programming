@@ -11,4 +11,7 @@ int **alloc_grid(int width, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
 
+/* Helper function */
+void ch_free_grid(char **grid, unsigned int height) 
+
 #endif
