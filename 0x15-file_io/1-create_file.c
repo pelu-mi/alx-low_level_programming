@@ -14,11 +14,11 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	while (*(text_content + text_len) != '\0')
-		text_len++;
-
-	if (text_content == NULL)
-		text_len = 0;
+	if (text_content != NULL)
+	{
+		while (*(text_content + text_len) != '\0')
+			text_len++;
+	}
 
 	o = open(filename, O_CREAT | O_WRONLY, 0600);
 	w = write(o, text_content, text_len);
