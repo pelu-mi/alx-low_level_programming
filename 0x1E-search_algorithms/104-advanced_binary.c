@@ -23,7 +23,7 @@ int recursive_binary(int *array, size_t left, size_t right, int value)
 	printf("\n");
 	/* Computation */
 	m = floor((l + r) / 2);
-	if (value == array[m] && l == r)
+	if (value == array[m] && (l == r || l + 1 == r))
 		return (m);
 	if (value > array[m])
 		return (recursive_binary(array, m + 1, r, value));
