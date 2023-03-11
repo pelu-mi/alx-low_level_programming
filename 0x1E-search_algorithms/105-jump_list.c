@@ -23,7 +23,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		next = (i + step > size - 1) ? size - 1 : i + step;
 		/* Find the next step and check if its less than the value */
 		after = current;
-		for (j = 0; j < step; j++)
+
+		for (j = 0; j < next - i; j++)
 			after = after->next;
 		printf("Value checked at index [%ld] = [%d]\n", after->index, after->n);
 		if (value <= after->n || i + step > size - 1)
