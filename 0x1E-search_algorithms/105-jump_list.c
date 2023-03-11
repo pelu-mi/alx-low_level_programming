@@ -29,7 +29,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		printf("Value checked at index [%ld] = [%d]\n", after->index, after->n);
 		if (value <= after->n || i + step > size - 1)
 		{
-			printf("Value found between indexes [%ld] and [%ld]\n", i, i + step);
+			printf("Value found between indexes [%ld] and [%ld]\n", i, next);
 			/* Check all elements in block */
 			while (i <= next)
 			{
