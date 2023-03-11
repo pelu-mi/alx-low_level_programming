@@ -20,14 +20,16 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			return (current);
 		/* Find the next step and check if its less than the value */
 		if (current->express)
+		{
 			after = current->express;
+			printf("Value checked at index [%ld] = [%d]\n", after->index, after->n);
+		}
 		else
 		{
 			after = current;
 			while (after->next)
 				after = after->next;
 		}
-		printf("Value checked at index [%ld] = [%d]\n", after->index, after->n);
 		if (value <= after->n || !(current->express))
 		{
 			printf("Value found between indexes [%ld] and [%ld]\n", current->index, after->index);
